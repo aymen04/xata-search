@@ -10,7 +10,8 @@
     "xata:codegen": "pnpm -s dlx @xata.io/cli@latest codegen --output=lib/xata.codegen.ts",
     "xata:seed": "node scripts/seed.mjs",
     "xata:link": "pnpm -s dlx @xata.io/cli@latest init --schema=schema.json --codegen=lib/xata.codegen.ts",
-    "one-click": "pnpm install && node scripts/one-click.mjs && node scripts/seed.mjs"
+    "one-click": "pnpm install && node scripts/one-click.mjs && node scripts/seed.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
@@ -26,6 +27,7 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.1",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
