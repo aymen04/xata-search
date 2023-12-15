@@ -9,16 +9,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    container:
-      image: circleci/node:14-browsers
 
     steps:
-    - name: Clear Cache
-      run: |
-       sudo rm -rf $RUNNER_TEMP
-        mkdir -p $RUNNER_TEMP
-       sudo chown -R $(whoami) $RUNNER_TEMP
-
     - name: Checkout Repository
       uses: actions/checkout@v2
 
