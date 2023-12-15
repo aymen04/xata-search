@@ -13,6 +13,11 @@
     "one-click": "pnpm install --no-frozen-lockfile && node scripts/one-click.mjs && node scripts/seed.mjs",
     "test:e2e": "playwright test"
   },
+  
+  "engines": {
+    "node": ">=16.5.0"
+  },
+  
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "@vercel/og": "^0.5.20",
