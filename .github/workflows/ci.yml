@@ -9,6 +9,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    container:
+      image: circleci/node:14-browsers
 
     steps:
     - name: Checkout Repository
