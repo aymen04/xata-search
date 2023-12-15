@@ -14,7 +14,10 @@ jobs:
 
     steps:
     - name: Clear Cache
-      run: rm -rf $RUNNER_TEMP
+      run: |
+       sudo rm -rf $RUNNER_TEMP
+        mkdir -p $RUNNER_TEMP
+       sudo chown -R $(whoami) $RUNNER_TEMP
 
     - name: Checkout Repository
       uses: actions/checkout@v2
