@@ -17,13 +17,16 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '14' 
+        node-version: '14'
 
     - name: Install Dependencies
       run: npm install
 
     - name: Run Tests
       run: npm test
+
+    - name: Install Playwright
+      run: npx playwright install
 
     - name: Run E2E Tests
       run: npm run test:e2e
@@ -34,4 +37,4 @@ jobs:
         vercel-token: ${{ secrets.VERCEL_TOKEN }}
         vercel-org-id: aymen04
         vercel-project-id: xata-search-opl9vwy4d
-        alias-domains: 'xata-search-aymen04.vercel.app' 
+        alias-domains: 'xata-search-aymen04.vercel.app'
