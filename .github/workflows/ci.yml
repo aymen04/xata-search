@@ -13,6 +13,9 @@ jobs:
       image: circleci/node:14-browsers
 
     steps:
+    - name: Clear Cache
+      run: rm -rf $RUNNER_TEMP
+
     - name: Checkout Repository
       uses: actions/checkout@v2
 
