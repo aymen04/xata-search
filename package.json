@@ -49,7 +49,7 @@
   "packageManager": "pnpm@8.6.6",
   "jest": {
     "testMatch": [
-      "tests/unit/unit-test.js"
+      "tests/unit/unit-test.spec.js"
     ]
   }
 }
